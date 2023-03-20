@@ -1,10 +1,12 @@
 <?php
 $timezone = date_default_timezone_set("Europe/Amsterdam");
-// $date = date('m/d/Y H:i:s a', time());
-$date = date('H:i');
-echo $date;
+// $timezone = date_default_timezone_set("America/Los_Angeles");
+// $timezone = date_default_timezone_set("Asia/Tokyo");
 
-if ($date >= "6:00" && $date < "12:00") {
+$date = date('H:i');
+// echo $date;
+
+if ($date >= "06:00" && $date < "12:00") {
     $greet = "Good morning";
     $bg = "morning.png";
 }
@@ -16,7 +18,7 @@ else if ($date >= "18:00" && $date < "00:00") {
     $greet = "Good evening";
     $bg = "evening.png";
 }
-else if ($date >= "00:00" && $date < "6:00") {
+else if ($date >= "00:00" && $date < "06:00") {
     $greet = "Good night";
     $bg = "night.png";
 }
@@ -35,13 +37,24 @@ else if ($date >= "00:00" && $date < "6:00") {
     <title>Goedemorgen</title>
 </head>
 
-<body>
-<p> <?= $greet ?></p> <!-- is hetzelfde als < ?php echo $greet ?>  -->
+<body> 
+    <div id="center-text">
+        <p> <?= $greet ?></p> 
+        <p> <?= $date ?></p>
+    </div>
 </body>
 
 <style>
     body {
         background-image: url(<?= $bg?>)
+    }
+
+    #center-text {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 50%;
     }
 </style>
 
