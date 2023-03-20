@@ -6,15 +6,19 @@ echo $date;
 
 if ($date >= "6:00" && $date < "12:00") {
     $greet = "Good morning";
+    $bg = "morning.png";
 }
 else if ($date >= "12:00" && $date < "18:00") {
     $greet = "Good afternoon";
+    $bg = "afternoon.png";
 }
 else if ($date >= "18:00" && $date < "00:00") {
     $greet = "Good evening";
+    $bg = "evening.png";
 }
 else if ($date >= "00:00" && $date < "6:00") {
     $greet = "Good night";
+    $bg = "night.png";
 }
 
 
@@ -37,7 +41,7 @@ else if ($date >= "00:00" && $date < "6:00") {
 
 <style>
     body {
-        background-image: url('afternoon.png')
+        background-image: url(<?= $bg?>)
     }
 </style>
 
