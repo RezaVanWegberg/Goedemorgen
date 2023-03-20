@@ -1,5 +1,5 @@
 <?php
-$timezone = date_default_timezone_set("Asia/Jakarta");
+$timezone = date_default_timezone_set("Europe/Amsterdam");
 // $date = date('m/d/Y H:i:s a', time());
 $date = date('H:i');
 echo $date;
@@ -32,12 +32,13 @@ else if ($date >= "00:00" && $date < "6:00") {
 </head>
 
 <body>
-<p> <?= $greet ?></p>
-
+<p> <?= $greet ?></p> <!-- is hetzelfde als < ?php echo $greet ?>  -->
 </body>
 
 <style>
-
+    body {
+        background-image: url('afternoon.png')
+    }
 </style>
 
 
